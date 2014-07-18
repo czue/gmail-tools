@@ -1,0 +1,5 @@
+.idea
+gmail.storage
+client_secret.json
+*.pyc
+*.csv
