@@ -7,7 +7,7 @@ from oauth2client.tools import run
 
 def get_authenticated_service():
     # Path to the client_secret.json file downloaded from the Developer Console
-    CLIENT_SECRET_FILE = 'client_secret_localhost.json'
+    CLIENT_SECRET_FILE = 'client_secret.json'
 
     # Check https://developers.google.com/gmail/api/auth/scopes for all available scopes
     OAUTH_SCOPE = 'https://www.googleapis.com/auth/gmail.readonly'

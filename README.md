@@ -8,7 +8,7 @@ Right now this just supports passing in a search term to your inbox, and dumping
 
 See the quickstart guide for instructions on how to get setup with a gmail developer app: https://developers.google.com/gmail/api/quickstart/quickstart-python.
 
-Save the authentication file you download as `client_secret_localhost.json`.
+Save the authentication file you download as `client_secret.json`.
 
 Run!
 
