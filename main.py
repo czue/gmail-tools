@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import csv
 import sys
 from hqgmail.client import GmailClient, get_authenticated_service
