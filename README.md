@@ -13,7 +13,7 @@ Save the authentication file you download as `client_secret.json`.
 Run!
 
 
-# Usage
+## Usage
 
 This is the structure of a query:
 
