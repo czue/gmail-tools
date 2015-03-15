@@ -6,7 +6,7 @@ Right now this just supports passing in a search term to your inbox, and dumping
 
 ## Setup
 
-See the quickstart guide for instructions on how to get setup with a gmail developer app: https://developers.google.com/gmail/api/quickstart/quickstart-python.
+See the quickstart guide for instructions on how to get setup with a gmail developer app: https://developers.google.com/gmail/api/quickstart/quickstart-python. When setting up your OAuth credentials, set Redirect URIs to 'http://localhost:8080/'.
 
 Save the authentication file you download as `client_secret.json`.
 
