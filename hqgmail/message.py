@@ -4,8 +4,9 @@ from dateutil.parser import parse
 
 class Message(object):
 
-    def __init__(self, date, snippet, sender):
+    def __init__(self, date, subject, snippet, sender):
         self.date = date
+        self.subject = subject
         self.snippet = snippet
         self.sender = sender
 
@@ -17,6 +18,7 @@ class Message(object):
 
         return cls(
             date=parse(headers_dict['Date'][0]),
+            subject=headers_dict['Subject'][0],
             snippet=result['snippet'],
             sender=headers_dict['From'][0],
         )

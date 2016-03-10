@@ -10,7 +10,7 @@ def dump_search_results(filename, query, max_results):
     client = GmailClient(get_authenticated_service())
     with open(filename, 'wb') as f:
         writer = csv.writer(f)
-        writer.writerow(['date', 'time', 'hour', 'minute', 'second', 'sender', 'snippet'])
+        writer.writerow(['date', 'time', 'hour', 'minute', 'second', 'sender', 'subject', 'snippet', 'short_subject', 'short_snippet'])
         for i, msg in enumerate(client.iter_messages(query, max_results)):
             parsed = Message.from_api_result(msg)
             writer.writerow([
@@ -20,7 +20,10 @@ def dump_search_results(filename, query, max_results):
                 parsed.date.minute,
                 parsed.date.second,
                 parsed.sender,
+                parsed.subject,
                 parsed.snippet,
+                parsed.subject[:50],
+                parsed.snippet[:50],
             ])
             if i % 100 == 0:
                 print '{0}/{1}: {2}'.format(i, max_results, parsed.date)
