@@ -2,7 +2,9 @@
 
 
 Tools for querying your gmail inbox.
-Right now this just supports passing in a search term to your inbox, and dumping the results in a machine readable csv format for future analysis.
+Right now this just supports passing in a search term to your inbox, and dumping the results in a machine readable csv format for future analysis,
+as well as some simple stats (messages by date and username).
+There are multiple output files.
 
 ## Setup
 
@@ -22,8 +24,8 @@ This is the structure of a query:
 ./main.py [gmail search query] [max results] [filename]
 ```
 
-For example, to find the last 1000 cloudant timeouts in your inbox you could run:
+For example, to find the last 1000 messages to a particular label in your inbox you could run:
 
 ```
-./main.py "the request could not be processed in a reasonable amount of time." 1000 cloudant-timeouts.csv
+./main.py label:my-label 1000 mylabel-dump.csv
 ```
