@@ -42,11 +42,11 @@ def dump_raw_verbose(input_filename, output_filename):
                         parsed.date.hour,
                         parsed.date.minute,
                         parsed.date.second,
-                        parsed.sender.encode('utf-8'),
-                        parsed.subject.encode('utf-8'),
-                        parsed.snippet.encode('utf-8'),
-                        parsed.subject[:50].encode('utf-8'),
-                        parsed.snippet[:50].encode('utf-8'),
+                        parsed.sender,
+                        parsed.subject,
+                        parsed.snippet,
+                        parsed.subject[:50],
+                        parsed.snippet[:50],
                     ])
                 except Exception as e:
                     print u'error with message {}: e'.format(parsed)
